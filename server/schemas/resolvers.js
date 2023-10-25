@@ -1,8 +1,8 @@
-const { Product } = require("../models");
+const { Product } = require("../models/product");
 
 const resolvers = {
   Query: {
-    subs: async () => {
+    products: async () => {
       return Product.find();
     },
   },
@@ -32,7 +32,7 @@ const resolvers = {
         return product;
       }
     },
-    editSub: async (
+    editProduct: async (
       parent,
       { _id, productName, purchasePrice, purchaseDate, salePrice, saleDate }
     ) => {

@@ -1,4 +1,4 @@
-import { GraphQLScalarType, Kind } from "graphql";
+const { GraphQLScalarType, Kind } = require("graphql");
 const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
@@ -6,9 +6,9 @@ const typeDefs = gql`
     _id: ID
     productName: String!
     purchasePrice: Float
-    purchaseDate: Date
+    purchaseDate: String
     salePrice: Float
-    saleDate: Date
+    saleDate: String
     profit: Float
     profitPerMonth: Float
   }
@@ -21,16 +21,16 @@ const typeDefs = gql`
     addProduct(
       productName: String!
       purchasePrice: Float
-      purchaseDate: Date
+      purchaseDate: String
     ): Product
     removeProduct(_id: ID!): Product
     editProduct(
       _id: ID!
       productName: String!
       purchasePrice: Float
-      purchaseDate: Date
+      purchaseDate: String
       salePrice: Float
-      saleDate: Date
+      saleDate: String
       profit: Float
     ): Product
   }
