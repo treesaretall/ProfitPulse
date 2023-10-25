@@ -32,7 +32,7 @@ const typeDefs = gql`
       salePrice: Float
       saleDate: Date
       profit: Float
-    ): Sub
+    ): Product
   }
 `;
 
