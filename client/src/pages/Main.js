@@ -1,4 +1,10 @@
+import InputCard from "../components/InputCard";
+
 const Main = () => {
-  return <div>Hi world</div>;
+  return (
+    <div>
+      <InputCard />
+    </div>
+  );
 };
 export default Main;
